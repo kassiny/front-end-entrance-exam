@@ -2,6 +2,11 @@ window.jsPDF = window.jspdf.jsPDF;
 
 function savePDF() {
   //  document.getElementById('download-pdf').addEventListener('click', function() {
+        /*let images = document.getElementsByTagName("img");
+        for (let i = 0; i < images.length; i ++)
+        {
+            images[i].crossOrigin = "anonymous";
+        }*/
 
         const element = document.getElementById('mainbody'); // Get the HTML element to be converted to PDF
         html2canvas(element).then(canvas => {
