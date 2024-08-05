@@ -1,96 +1,122 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+p {
+    font-family: Poppins;
+    /*font-weight: 900;*/
+}
+.mainbody {
+    margin: 3%;
+    background-color: aquamarine;
+ }
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+ .cont {
+    background-color: #F0F0F0;
+    border-radius: 3%;
+    margin: 1%;
+    padding: 1%;
+ }
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+ .namebox {
+    min-width: 124px;
+    min-height: 124px;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+.languagelist {
+    display: flex;
 }
-a:hover {
-  color: #535bf2;
+
+.jobLine {
+    display: flex;
+    justify-content: space-between;
+}
+
+.languagelevel {
+    display:grid;
+    grid-row: auto;
+    /*justify-content: ;*/
+}
+
+.experience{
+    width: 411px ;
+}
+
+.mostRecent {
+    margin: 1%;
+    padding: 1%;
+    border-radius: 8px;
+    align-items: flex-start;
+    display: grid;
+    grid-row: auto;
+    background-color: #28D979;
+    color: white;
+    font-weight: unset;
+}
+
+.jobEntry {
+    margin: 1%;
+    padding: 1%;
+    border-radius: 8px;
+    align-items: flex-start;
+    display: grid;
+    grid-row: auto;
+    background-color: white;
+    color: black;
+}
+
+.mostRecentText {
+    border-radius: 59px;
+    padding-top: 0.3%;
+    padding-bottom: 0.3%;
+    padding: 1%;
+    background-color: #7E731266;
+    color:#DDF163;
+    font-weight: bold;
+}
+.timeline {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tagName {
+    display: flex;
+    background-color: black;
+    color: white;
+    border-radius: 59px;
+    /*font-size: 5px;*/
+    align-items: center;
+    justify-content: center;
+}
+
+.instrumentBlock {
+    justify-content: space-evenly;
+    gap: 16px;
+    display: grid;
+    grid-row: auto;
+    grid-template-columns: auto auto;
+}
+
+.educationgrid {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-row: auto;
+    gap: 16px;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.profilePicture {
+    width: 124px;
+    height: 124px;
+    padding: 35px;
+    border-radius: 20%;
 }
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+
+section {
+    display: flex;
+    justify-content: flex-start;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+img {
+    object-fit: contain;
 }

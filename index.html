@@ -1,13 +1,256 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="./js/main.js"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!--link  rel="script" href="./script/source.js"-->
+    <title>CV Creator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script> !-->
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.js" type="module"></script>
+    <!--script> src="script/source.js"</script-->
+</head>
+<body onload="getEditableText()">
+    <div class="mainbody" id="mainbody">
+        <section>
+            <div class="cont photo">
+                <img  src="./img/profileImg.png" alt="Your picture">
+            </div>
+            <div class="cont namebox">
+                <div class="hellophrase">
+                    <p>Hello. I'm</p>
+                </div>
+                <div class="namephrase" contenteditable="true">
+                    <p >Karhik SR</p>
+                </div>
+                <div class="rolephrase">
+                    <p>UX/UI Designer</p>
+                </div>
+            </div>
+            <div class="cont languagebox">
+                <div class="languagetitle">
+                    <p>Languages</p>
+                </div>
+                <div class="languagelist">
+                    <div class="languageNamesList">
+                        <p>English</p>
+                        <p>Malayalam</p>
+                        <p>Hindi</p>
+                    </div>
+                    <div class="languagelevel">
+                        <meter></meter>
+                        <meter></meter>
+                        <meter></meter>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="cont experience">
+                <h1>Experience</h1>
+                
+
+                <div>
+                    <div class="mostRecent">
+                        <div class="jobLine">
+                            <div class="timeline" id="timelinerecent" contenteditable="true" onkeyup="setEditableText(this.id)">
+                                <p> jun 2023 - Present</p>
+                            </div>
+                            <div class="mostRecentText">
+                                <p>most recent</p>
+                            </div>
+                        </div>
+
+                        <div class="jobLine">
+                            <div contenteditable="true">
+                                <div>
+                                    <p>Marketing Manager</p>
+                                </div>
+                                <div>
+                                    <p>Pankayam|full-time</p>
+                                </div>
+                            </div>
+                            <div class = "feautured points" contenteditable="true">
+                                <p>
+                                    <ul>
+                                        <li>Strategy development and planning of campaigns that promote the business and generate genuine traffic</li>
+                                        <li>SEO Content Creation for Blogs, Website, Social media</li>
+                                    </ul>
+                                </p>
+                            </div>                         
+                        </div>  
+                    </div>
+
+                    <div class="jobEntry">
+                        <div class="jobLine">
+                            <div class="timeline" contenteditable="true">
+                                <p> jun 2023 - Present</p>
+                            </div>
+                        </div>
+
+                        <div class="jobLine">
+                            <div contenteditable="true">
+                                <div>
+                                    <p>Marketing Manager</p>
+                                </div>
+                                <div>
+                                    <p>Pankayam|full-time</p>
+                                </div>
+                            </div>
+                            <div class = "feautured points" contenteditable="true">
+                                <p>
+                                    <ul>
+                                        <li>Strategy development and planning of campaigns that promote the business and generate genuine traffic</li>
+                                        <li>SEO Content Creation for Blogs, Website, Social media</li>
+                                    </ul>
+                                </p>
+                            </div>                         
+                        </div>  
+                    </div>
+
+                    <div class="jobEntry">
+                        <div class="jobLine">
+                            <div class="timeline" contenteditable="true">
+                                <p> jun 2023 - Present</p>
+                            </div>
+                        </div>
+
+                        <div class="jobLine">
+                            <div contenteditable="true">
+                                <div>
+                                    <p>Marketing Manager</p>
+                                </div>
+                                <div>
+                                    <p>Pankayam|full-time</p>
+                                </div>
+                            </div>
+                            <div class = "feautured points" contenteditable="true">
+                                <p>
+                                    <ul>
+                                        <li>Strategy development and planning of campaigns that promote the business and generate genuine traffic</li>
+                                        <li>SEO Content Creation for Blogs, Website, Social media</li>
+                                    </ul>
+                                </p>
+                            </div>                         
+                        </div>  
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="cont tools">
+                <h1>Tools</h1>
+                <div class="instuments">
+                 <div>
+                    <div class="tagName">Design</div>
+                    <div class="instrumentBlock">
+                        <img src="img/icon/logoFigma.png" alt="Figma">
+                        <img src="img/icon/logoPhotoshop.png" alt="Photoshop">
+                        <img src="img/icon/logoIllustrator.png" alt="Illustrator">
+                        <img src="img/icon/logoPremiere.png" alt="logoPremiere">
+                        <img src="img/icon/logoNotion.png" alt="Notion">
+                        <img src="img/icon/logoMeet.png" alt="Meet">
+                    </div>
+                </div>
+
+                <div>
+                    <div class="tagName">no-code</div>
+                    <div class="instrumentBlock">
+                        <img src="img/icon/logoZapìer 1.png" alt="Zapper">
+                        <img src="img/icon/logoWebflow.png" alt="webflow">
+                        <img src="img/icon/logoFramer.png" alt="Framer">
+                        <img src="img/icon/logoWordpress.png" alt="wordpress">
+                    </div>
+                </div>
+                <div>
+                    <div class="tagName">artificial intelligence</div>
+                    <div class="instrumentBlock">
+                        <img src="img/icon/logoChatGPT 1.png" alt="ChatGPT">
+                        <img src="img/icon/logoCopilot 1.png" alt="Copilot">
+                        <img src="img/icon/logoMidjourney 1.png" alt="MidJourney">
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="cont">
+                <h1>Education</h1>
+                <div class="educationgrid">
+                    <div class="mostRecent">
+                        <div class="timeline">
+                            <p contenteditable="true">2023</p>
+                            <img src="img/icon/Vector.png" alt="heart">
+                        </div>
+                        <div contenteditable="true">
+                            <h2>UI/UX</h2>
+                            <div>
+                                #UX #UI #research
+                                #DesignSystem #Ui
+                                #wireframing #figma
+                            </div>
+                            <div>
+                                Coursera                             
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="jobEntry">
+                        <div class="timeline">
+                            <p contenteditable="true">2023</p>
+                        </div>
+                        <div contenteditable="true">
+                            <h2>UI/UX</h2>
+                            <div>
+                                #UX #UI #research
+                                #DesignSystem #Ui
+                                #wireframing #figma
+                            </div>
+                            <div>
+                                Coursera                             
+                            </div>
+                        </div>
+                    </div>
+                    <div class="jobEntry">
+                        <div class="timeline">
+                            <p contenteditable="true">2023</p>
+                        </div>
+                        <div contenteditable="true">
+                            <h2>UI/UX</h2>
+                            <div>
+                                #UX #UI #research
+                                #DesignSystem #Ui
+                                #wireframing #figma
+                            </div>
+                            <div>
+                                Coursera                             
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cont">
+                <h1>Interests</h1>
+                <div class="interestGrid">
+                    <div class="interestbox"></div>
+                    <div class="interestbox"></div>
+                    <div class="interestbox"></div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+    <script src="js/source.js"></script>
+    <div class="saveButton">
+        <button onclick="savePDF()" >Save as PDF</button>
+    </div>
+   
+</body>
 </html>
+
+
