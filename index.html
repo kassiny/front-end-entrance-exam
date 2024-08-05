@@ -27,7 +27,7 @@
                 <div class="namephrase" contenteditable="true">
                     <p >Karhik SR</p>
                 </div>
-                <div class="rolephrase">
+                <div class="rolephrase" id = "rolephrase" onkeyup="setEditableText(this.id)">
                     <p>UX/UI Designer</p>
                 </div>
             </div>
@@ -36,7 +36,7 @@
                     <p>Languages</p>
                 </div>
                 <div class="languagelist">
-                    <div class="languageNamesList">
+                    <div class="languageNamesList" id="languageNamesList" contenteditable="true"  onkeyup="setEditableText(this.id)">
                         <p>English</p>
                         <p>Malayalam</p>
                         <p>Hindi</p>
@@ -66,7 +66,7 @@
                         </div>
 
                         <div class="jobLine">
-                            <div contenteditable="true">
+                            <div contenteditable="true" id="job1">
                                 <div>
                                     <p>Marketing Manager</p>
                                 </div>
@@ -74,7 +74,7 @@
                                     <p>Pankayam|full-time</p>
                                 </div>
                             </div>
-                            <div class = "feautured points" contenteditable="true">
+                            <div class = "feautured points" id="feauturedPoints" contenteditable="true"  onkeyup="setEditableText(this.id)">
                                 <p>
                                     <ul>
                                         <li>Strategy development and planning of campaigns that promote the business and generate genuine traffic</li>
@@ -87,7 +87,7 @@
 
                     <div class="jobEntry">
                         <div class="jobLine">
-                            <div class="timeline" contenteditable="true">
+                            <div class="timeline" id="timeline2" contenteditable="true"  onkeyup="setEditableText(this.id)">
                                 <p> jun 2023 - Present</p>
                             </div>
                         </div>
@@ -233,16 +233,21 @@
                     </div>
                 </div>
             </div>
-
-            <div class="cont">
-                <h1>Interests</h1>
-                <div class="interestGrid">
-                    <div class="interestbox"></div>
-                    <div class="interestbox"></div>
-                    <div class="interestbox"></div>
+            <div class="vert">
+                <div class="cont">
+                    <h1>Interests</h1>
+                    <div class="interestGrid" contenteditable="true">
+                        <div class="interestbox">branding</div>
+                        <div class="interestbox"> design</div>
+                        <div class="interestbox"> photography</div>
+                    </div>
                 </div>
-
+                <div class="cont blackc" contenteditable="true">
+                    <h1>Let's chat! I'm ready to work on exciting projects</h1>
+                    <p>starlink.designspace@gmail.com</p>
+                </div>
             </div>
+            
         </section>
     </div>
     <script src="js/source.js"></script>
